@@ -1,7 +1,9 @@
-import Image from 'next/image'
-import React, { Fragment } from 'react'
+import Image from "next/image";
+import React, { Fragment } from "react";
+import { useViewport } from "../context/viewport";
 
 const Section3 = () => {
+  const { width } = useViewport();
   return (
     <Fragment>
       <div className="why-wrapper mb-10">
@@ -31,19 +33,21 @@ const Section3 = () => {
             </div>
           ))}
         </div>
-        <div className="why-image">
-          <Image
-            src={'/smiling-girl.png'}
-            alt={'smiling girl'}
-            width={600}
-            height={750}
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </div>
+        {width > 900 && (
+          <div className="why-image">
+            <Image
+              src={"/smiling-girl.png"}
+              alt={"smiling girl"}
+              width={600}
+              height={750}
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </div>
+        )}
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Section3
+export default Section3;

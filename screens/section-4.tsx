@@ -33,7 +33,7 @@ const Section4 = () => {
   }
 
   return (
-    <div className="contact mb-5">
+    <div className="contact mb-5" id="contact">
       <div>
         <h2 className="sub-heading">
           Got A Project <br /> Or A Partnership <br />

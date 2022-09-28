@@ -1,16 +1,18 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
+import { useViewport } from "../context/viewport";
 
 const Section2 = () => {
+  const { width } = useViewport();
   const services = [
     {
-      title: 'UI/UX',
+      title: "UI/UX",
       label:
-        'Mordern and elegant design prototypes and better user flows to improve customer conversion rate',
-      background: '#DDFBF8',
+        "Mordern and elegant design prototypes and better user flows to improve customer conversion rate",
+      background: "#DDFBF8",
       icon: (
         <svg
-          height={'1.8rem'}
-          width={'1.8rem'}
+          height={"1.8rem"}
+          width={"1.8rem"}
           viewBox="0 0 24 24"
           color="#19E2CF"
         >
@@ -22,14 +24,14 @@ const Section2 = () => {
       ),
     },
     {
-      title: 'Web Development',
-      label: 'Fast and Secure websites built using mordern technologies',
-      background: '#E7D9F8',
+      title: "Web Development",
+      label: "Fast and Secure websites built using mordern technologies",
+      background: "#E7D9F8",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height={'1.5rem'}
-          width={'1.5rem'}
+          height={"1.5rem"}
+          width={"1.5rem"}
           viewBox="0 0 24 24"
           fill="#863FDE"
         >
@@ -38,9 +40,9 @@ const Section2 = () => {
       ),
     },
     {
-      title: 'Testing',
-      label: 'Software testing to ensure everything works well and avoid bugs',
-      background: '#FFEDE6',
+      title: "Testing",
+      label: "Software testing to ensure everything works well and avoid bugs",
+      background: "#FFEDE6",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +56,15 @@ const Section2 = () => {
       ),
     },
     {
-      title: 'Deployment and Maintainence',
+      title: "Deployment and Maintainence",
       label:
-        'Design, Setup cloud architecture, deploy and maintain your product.',
-      background: '#FFE1E9',
+        "Design, Setup cloud architecture, deploy and maintain your product.",
+      background: "#FFE1E9",
 
       icon: (
         <svg
-          height={'1.7rem'}
-          width={'1.7rem'}
+          height={"1.7rem"}
+          width={"1.7rem"}
           viewBox="0 0 24 24"
           color="#FD346E"
         >
@@ -73,11 +75,13 @@ const Section2 = () => {
         </svg>
       ),
     },
-  ]
+  ];
 
   return (
-    <div className="mb-10">
-      <div className="sub-heading text-center w-100 m-auto">
+    <div className="mb-10" id="services">
+      <div
+        className={`sub-heading ${width > 900 && "text-center"} w-100 m-auto`}
+      >
         <p className="label">Our Services</p>
         <h2>Save Time Managing your business with our best services</h2>
       </div>
@@ -98,7 +102,7 @@ const Section2 = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Section2
+export default Section2;
